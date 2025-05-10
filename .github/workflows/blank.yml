@@ -13,9 +13,7 @@ env:
 jobs:
   Formatting:
     name: Run Formatting Check
-    if: ${{ github.event.issue.pull_request &&
-        ( ( github.event.comment.body == '/bot run uncrustify' ) ||
-          ( github.event.comment.body == '/bot run formatting' ) ) }}
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - name: Do Formatting
